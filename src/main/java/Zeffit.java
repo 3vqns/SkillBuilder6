@@ -9,16 +9,17 @@
  */
 public class Zeffit
 {
-    // TODO: add final variables
+    private static final int MAX_HEALTH = 4;
+    private static final int HIT_DAMAGE = 1;
 
-    // TODO: add instance variable(s)
+    private static int health;
 
     /**
      * Constructor for objects of class Zeffit
      */
     public Zeffit()
     {
-        // TODO: initialize instance variable(s)
+        health = 4;
     }
 
     /**
@@ -27,7 +28,7 @@ public class Zeffit
      */
     public void takesHit()
     {
-        // TODO: replace this line with your code
+        health -= HIT_DAMAGE;
     }
 
     /**
@@ -37,7 +38,7 @@ public class Zeffit
      */
     public boolean isHitFree()
     {
-        // TODO: replace this line with your code
+        return health == MAX_HEALTH;
     }
 
     /**
@@ -47,7 +48,7 @@ public class Zeffit
      */
     public boolean isGreen()
     {
-        // TODO: replace this line with your code
+        return health == MAX_HEALTH - HIT_DAMAGE;
     }
 
     /**
@@ -57,7 +58,7 @@ public class Zeffit
      */
     public boolean isBlue()
     {
-        // TODO: replace this line with your code
+        return health == MAX_HEALTH - (2 * HIT_DAMAGE);
     }
 
     /**
@@ -67,7 +68,7 @@ public class Zeffit
      */
     public boolean isRed()
     {
-        // TODO: replace this line with your code
+        return health == MAX_HEALTH - (3 * HIT_DAMAGE);
     }
 
     /**
@@ -77,7 +78,7 @@ public class Zeffit
      */
     public boolean isDead()
     {
-        // TODO: replace this line with your code
+        return health == MAX_HEALTH - (4 * HIT_DAMAGE);
     }
 }
 
